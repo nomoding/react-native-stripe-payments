@@ -11,6 +11,11 @@ RCT_EXPORT_METHOD(init:(NSString *)publishableKey)
     [Stripe setDefaultPublishableKey:publishableKey];
 }
 
+RCT_EXPORT_METHOD(setPublishingKey:(NSString *)publishableKey)
+{
+    [Stripe setDefaultPublishableKey:publishableKey];
+}
+
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(isCardValid:(NSDictionary *)cardParams)
 {
     STPCardParams *card = [[STPCardParams alloc] init];
