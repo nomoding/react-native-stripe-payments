@@ -22,7 +22,7 @@ class Stripe {
   _stripeInitialized = false
 
   setOptions = (options: InitParams) => {
-    if (this._stripeInitialized) { return; }
+    // if (this._stripeInitialized) { return; }
     StripePayments.init(options.publishingKey);
     this._stripeInitialized = true;
   }
